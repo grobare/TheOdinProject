@@ -2,35 +2,36 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    border: 2px solid rgb(53, 48, 48);
+    border: 5px solid rgb(231, 8, 8);
+    font-family: sans-serif;
+    font-size: 22px;
   }
 
-  .one {
+  .mother {
     width: 500px;
-    margin: 16px auto;
-    background-color: aquamarine;
-  
+    margin: 15px auto;
+    background-color: aqua;
+    /* padding: 5px; */
   }
-  .one h1 {
-    text-align: center;
-    border: none;
+
+  .mother h1 {
+    font-weight: 600px;
+    padding: 5px;
+    font-size: 35px;
+  }
+
+  .mother p {
     padding: 5px;
   }
-  .one p {
-    border-left: none;
-    border-right: none;
-    border-bottom: none;
-    padding: 10px;
-  }
-  button {
-    display: block;
-    margin: 0 auto;
-    margin-bottom: 15px;
-    padding: 5px 15px;
-    cursor: pointer;
-    border: none;
+
+  .mother .son {
+    padding: 5px;
+    text-align: center;
   }
 
-  button:hover {
-    background-color: bisque;
+  .son button {
+    display: block;
+    margin: 5px auto;
+    padding: 5px 20px;
+    border: none;
   }
