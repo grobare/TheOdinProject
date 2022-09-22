@@ -11,3 +11,5 @@ if (answer == winningNumber) {
 } else {
     console.log('You lose. The winning number was', winningNumber)
 }
+
+// How to actually seed a real random number?
