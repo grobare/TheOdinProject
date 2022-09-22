@@ -3,22 +3,33 @@
     margin: 0;
     box-sizing: border-box;
   }
-
+.main {
+  margin: 250px auto;
+  width: 500px;
+  height: 250px;
+  background-color: aqua;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.one,
+.two,
+.three {
+  padding: 10px 20px;
+  margin: 10px;
+}
 .one {
   border: 2px solid blue;
-  background-color: aliceblue;
-  margin: 10px 250px;
-  padding: 30px;
+  align-self: flex-start;
 }
 
 .two {
   border: 2px solid red;
-  background-color: aqua;
-  margin: 10px 230px;
+
 }
 .three {
   border: 2px solid brown;
-  margin: 100px 240px 10px 1000px;
-  padding: 50px;
-  background-color: blanchedalmond;
+  align-self: flex-end;
+
 }
