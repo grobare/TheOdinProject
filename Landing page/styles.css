@@ -7,9 +7,12 @@
 
 
 .hero,
-.footer,
-section {
+.footer {
     background: #1F2937;
+}
+
+.hero,
+section {
     padding: 0 200px;
 }
 
@@ -47,7 +50,7 @@ section {
 
 .header {
     display: flex;
-    gap: 40px;
+    gap: 20px;
     padding: 20px 0;
     align-items: center;
     justify-content: center;
@@ -66,10 +69,10 @@ section {
     border-radius: 8px;
     font-size: 18px;
     font-weight: 600;
-    margin-top: 10px;
 }
 
 .hero-image img {
+    padding: 20px 0;
     height: auto;
     width: 100%;
 }
@@ -82,27 +85,64 @@ section {
 .hero-text p {
     color: #E5E7EB;
     font-size: 18px;
-    line-height: 1.5;
+    margin: 20px 0;
 }
 
 /* how it works section */
 
+.how {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
 .how .title {
     font-size: 36px;
     font-weight: 900;
-    color: #1F2937
+    color: #1F2937;
+    margin: 50px 0;
+}
+
+.steps {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.step {
+    flex: 1 1 0;
+    border: 2px solid #3882F6;
+    border-radius: 10px;
+    padding: 20px;
+
+}
+
+.step h3 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+/* quote */
+.quotes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #E5E7EB;
+    font-size: 36px;
+    color: #1F2937;
+    font-style: italic;
+    padding: 40px 0;
 }
 
 .quote {
-    background: #E5E7EB;
-    font-size: 36px;
-    color: #1F2937
+    margin: 20px auto;
 }
 
 .quote h5 {
     font-style: normal;
     font-weight: 900;
     text-align: end;
+    margin-top: 10px;
 }
 
 .call-to-action {
@@ -112,3 +152,8 @@ section {
 /* .footer span {
     color: blue;
 } */
+
+.footer {
+    text-align: center;
+    color: #F9FAF8;
+}
