@@ -12,8 +12,9 @@
 }
 
 .hero,
-section {
-    padding: 0 200px;
+section,
+.quotes {
+    padding: 0 10%;
 }
 
 /* navigation & main */
@@ -128,10 +129,10 @@ section {
     flex-direction: column;
     align-items: center;
     background: #E5E7EB;
-    font-size: 36px;
-    color: #1F2937;
+    font-size: 26px;
+    color: #1f2937;
     font-style: italic;
-    padding: 40px 0;
+    padding: 40px;
 }
 
 .quote {
@@ -140,6 +141,7 @@ section {
 
 .quote h5 {
     font-style: normal;
+    font-size: 24px;
     font-weight: 900;
     text-align: end;
     margin-top: 10px;
@@ -147,13 +149,66 @@ section {
 
 .call-to-action {
     background: #3882F6;
+    color: #F9FAF8;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 100px auto;
+    border-radius: 8px;
+    gap: 90px;
+    padding: 2rem;
 }
 
-/* .footer span {
-    color: blue;
-} */
+.call-to-action h2 {
+    font-weight: 800;
+}
+
+.call-to-action button {
+    border: 2px solid #E5E7EB;
+    background-color: transparent;
+    color: #F9FAF8;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 8px 26px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.call-to-action button:hover {
+    background-color: #E5E7EB;
+    color: #3882F6;
+}
+
+.footer span {
+    color: red;
+}
 
 .footer {
-    text-align: center;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: #F9FAF8;
+}
+
+@media only screen and (max-width: 768px) {
+    .header {
+        flex-direction: column;
+    }
+
+    .call-to-action {
+        flex-direction: column;
+        height: 100%;
+        gap: 20px;
+    }
+
+    .call-to-text {
+        flex-direction: column;
+    }
+
+    .call-to-text h2 {
+        margin-bottom: 10px;
+    }
+
 }
