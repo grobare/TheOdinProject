@@ -5,44 +5,15 @@
     font-family: 'Roboto', sans-serif;
 }
 
+
 .hero,
-.footer {
+.footer,
+section {
     background: #1F2937;
+    padding: 0 200px;
 }
 
-.hero,
-section,
-.footer {
-    padding: 0 100px;
-}
-.header {
-    display: flex;
-    gap: 20px;
-    padding: 20px 0;
-    height: auto;
-    align-items: center;
-    justify-content: center;
-}
-
-.hero {
-    color: #F9FAF8;
-}
-
-.hero-text,
-.hero-image {
-    flex: 1;
-}
-
-.hero-text h1 {
-    font-size: 48px;
-    font-weight: 900;
-}
-
-.hero-text p {
-    color: #E5E7EB;
-    font-size: 18px;
-    line-height: 4;
-}
+/* navigation & main */
 
 .navbar {
     display: flex;
@@ -59,7 +30,7 @@ section,
 .navbar ul {
     list-style-type: none;
     display: flex;
-    gap: 16px;
+    gap: 26px;
 }
 
 .navbar ul a {
@@ -68,7 +39,26 @@ section,
     font-size: 18px;
 }
 
-.hero button {
+/* hero/header section */
+
+.hero {
+    color: #F9FAF8;
+}
+
+.header {
+    display: flex;
+    gap: 40px;
+    padding: 20px 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-text,
+.hero-image {
+    flex: 1;
+}
+
+.hero-text button {
     background-color: #3882F6;
     color: #F9FAF8;
     border: none;
@@ -76,13 +66,26 @@ section,
     border-radius: 8px;
     font-size: 18px;
     font-weight: 600;
+    margin-top: 10px;
 }
 
-.hero-image div {
-    background-color: #eee;
+.hero-image img {
+    height: auto;
     width: 100%;
-    height: 100%;
 }
+
+.hero-text h1 {
+    font-size: 48px;
+    font-weight: 900;
+}
+
+.hero-text p {
+    color: #E5E7EB;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+/* how it works section */
 
 .how .title {
     font-size: 36px;
