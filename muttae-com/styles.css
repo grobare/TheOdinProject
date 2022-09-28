@@ -64,9 +64,9 @@ header nav a:hover {
 /* text hero */
 
 .hero-text {
+  flex: 2;
   font-size: 18px;
   display: flex;
-  flex: 2;
   flex-direction: column;
   padding-left: 3rem;
 }
@@ -88,8 +88,7 @@ header nav a:hover {
 
 .hero-image img {
   height: auto;
-  width: 300px;
-  transform: rotate(90deg);
+  max-width: 80%;
 }
 
 .hero-image img:hover {
@@ -113,14 +112,19 @@ header nav a:hover {
 .how {
   display: flex;
   flex-direction: column;
-  flex: 1;
   justify-content: center;
+  color: #264653;
+  flex: 1;
 }
 
-.how h4 {
-  font-size: 26px;
+.how h2 {
+  font-size: 36px;
+  padding: 1.5rem 0;
+  transform: rotate(-90deg);
   display: inline-flex;
   width: min-content;
+  height: min-content;
+  align-self: center;
 }
 
 .boxes {
@@ -130,12 +134,13 @@ header nav a:hover {
 
 .box {
   flex: 1;
-  padding: 0 1.5rem;
+  padding: 1.5rem;
 }
 
 .boxes h3 {
   font-size: 25px;
   text-align: center;
+  margin-bottom: 1rem;
 }
 
 /* footer */
@@ -154,4 +159,41 @@ header nav a:hover {
 
 .footer span {
   color: red;
+}
+
+/* responsive */
+
+@media only screen and (max-width: 768px) {
+  header,
+  section,
+  .how {
+    padding: 10px;
+  }
+
+  header nav {
+    flex-direction: column;
+  }
+
+  header nav .logo {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+  }
+
+  header nav li {
+    border: 2px solid #e2bb58;
+    padding: 5px 10px;
+  }
+
+  .hero {
+    flex-direction: column;
+    margin-top: 1.5rem;
+  }
+
+  .how h2 {
+    transform: none;
+  }
+
+  .boxes {
+    flex-direction: column;
+  }
 }
