@@ -8,10 +8,12 @@ body {
   font-family: "Arvo", sans-serif;
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
 }
 
 header,
-section {
+section,
+.how {
   padding: 0 15%;
 }
 
@@ -73,9 +75,8 @@ header nav a:hover {
   font-size: 48px;
 }
 
-.hero-text p,
 .hero-text li {
-  line-height: 1.5;
+  margin-top: 10px;
 }
 
 /* image hero */
@@ -95,19 +96,62 @@ header nav a:hover {
   transform: rotate(18deg);
 }
 
+/* headline */
+
+.headline {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #2a9d8f;
+  padding: 20px 0;
+  color: #eee;
+}
+
 /* how it works */
 
 .how {
   display: flex;
   flex-direction: column;
+  flex: 1;
+  justify-content: center;
 }
 
-.how h2 {
-  font-size: 36px;
-  text-align: center;
-  padding: 20px 0;
+.how h4 {
+  font-size: 26px;
+  display: inline-flex;
+  width: min-content;
 }
 
-.how h3 {
+.boxes {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.box {
+  flex: 1;
+  padding: 0 1.5rem;
+}
+
+.boxes h3 {
   font-size: 25px;
+  text-align: center;
+}
+
+/* footer */
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #eee;
+  background: #264653;
+  margin-top: auto;
+  text-align: center;
+  height: 60px;
+  margin-top: auto;
+}
+
+.footer span {
+  color: red;
 }
