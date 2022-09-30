@@ -10,8 +10,6 @@ body {
 }
 
 .container {
-  height: 100vw;
-  width: 100vh;
   width: 1080px;
   height: 1350px;
   border: 20px solid #0a92ac;
