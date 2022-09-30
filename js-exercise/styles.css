@@ -4,6 +4,15 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: "Arvo", sans-serif;
+}
+
+.one {
+  border: 2px solid black;
+  width: fit-content;
+}
+
 .container {
   width: 320px;
   height: 320px;
@@ -13,10 +22,11 @@
   margin: 10px;
   display: flex;
   justify-content: center;
-  justify-content: center;
 }
 
 .content {
+  font-size: 18px;
+  color: #f8cd2b;
   width: 100%;
   margin: 10px;
   border: 4px solid #12364f;
@@ -28,6 +38,7 @@
 }
 
 img {
-  width: 50px;
+  margin-top: -25px;
+  width: 75px;
   height: auto;
 }
