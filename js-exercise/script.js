@@ -1,34 +1,24 @@
-const x = 1;
+const names = [
+  "Chris",
+  "Li Kang",
+  "Anne",
+  "Francesca",
+  "Mustafa",
+  "Tina",
+  "Bert",
+  "Jada",
+];
 
-function a() {
-  const y = 2;
-  output(y);
+const para = document.createElement("p");
+
+// Add your code here
+function ranit(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-function b() {
-  const z = 3;
-  output(z);
+function chooseName(names) {
+  return names[ranit(0, names.length - 1)];
 }
 
-function output(a) {
-  const para = document.createElement("p");
-  document.body.appendChild(para);
-  para.textContent = `Value: ${a}`;
-}
-
-// const x = 1;
-
-// function a() {
-//   const y = 2;
-//   output(y)
-// }
-
-// function b() {
-//   const z = 3;
-// }
-
-// function output(value) {
-//   const para = document.createElement("p");
-//   document.body.appendChild(para);
-//   para.textContent = `Value: ${value}`;
-// }
+para.textContent = chooseName(names);
+document.body.appendChild(para);
