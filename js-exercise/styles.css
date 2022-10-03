@@ -2,6 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  margin: 5px;
 }
 
 body {
@@ -14,4 +15,9 @@ body {
   justify-content: center;
   color: #df9e5e;
   text-align: center;
+}
+
+body ul li {
+  text-align: start;
+  margin: 0;
 }
