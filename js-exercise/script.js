@@ -2740,7 +2740,8 @@ names = [
 ];
 
 const butt = document.querySelector("#button");
-const output = document.querySelector(".your-name");
+const output = document.createElement("p");
+const bodi = document.querySelector("body");
 
 function ran(min, max) {
   return Math.floor(Math.random() * (max - min + 1) + min);
@@ -2748,4 +2749,7 @@ function ran(min, max) {
 
 butt.addEventListener("click", () => {
   output.textContent = names[ran(0, names.length - 1)];
+  bodi.appendChild(output);
 });
+
+// document.body.appendChild(output);
