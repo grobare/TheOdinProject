@@ -1,4 +1,4 @@
-/* * {
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -13,4 +13,10 @@ body {
   align-items: center;
   justify-content: center;
   color: #df9e5e;
-} */
+  text-align: center;
+}
+
+.your-name {
+  margin-top: 5px;
+  color: black;
+}

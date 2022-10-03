@@ -2,50 +2,14 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Functions: Task 2</title>
-    <style>
-      p {
-        color: purple;
-        margin: 0.5em 0;
-      }
-
-      * {
-        box-sizing: border-box;
-      }
-
-      canvas {
-        border: 1px solid black;
-      }
-    </style>
+    <title>Random name generator</title>
     <link rel="stylesheet" href="../styles.css" />
+    <script src="script.js" defer></script>
   </head>
-
   <body>
-    <section class="preview"></section>
-
-    <canvas width="480" height="320"> </canvas>
+    <div class="output">
+      <button id="button">Click me to get a name!</button>
+      <div class="your-name"></div>
+    </div>
   </body>
-  <script>
-    const canvas = document.querySelector("canvas");
-    const ctx = canvas.getContext("2d");
-
-    const x = 50;
-    const y = 60;
-    const width = 100;
-    const height = 75;
-    let color = "blue";
-
-    // Add your code here
-    function draw() {
-      ctx.clearRect(0, 0, width, height);
-      ctx.beginPath();
-      ctx.rect(x, y, width, height);
-      ctx.fillStyle = color;
-      ctx.fill();
-    }
-    draw();
-    // Don't edit the code below here!
-
-    const section = document.querySelector("section");
-  </script>
 </html>
