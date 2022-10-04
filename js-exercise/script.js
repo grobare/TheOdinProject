@@ -1,26 +1,35 @@
 const canvas = document.querySelector("#can");
 const ctx = canvas.getContext("2d");
+const newBtn = document.querySelector("#new");
+const clearBtn = document.querySelector("#undo");
 
-const x = 50;
-const y = 60;
-const width = 100;
-const height = 75;
-const color = "blue";
+let WIDTH = document.documentElement.clientWidth;
+let HEIGHT = document.documentElement.clientHeight;
+
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+function random(num) {
+  return Math.floor(Math.random() * num);
+}
 
 function draw() {
-  ctx.beginPath();
-  ctx.rect(x, y, width, height);
-  ctx.fillStyle = color;
-  ctx.fill();
+  ctx.clearRect(0, 0, WIDTH, HEIGHT);
+  for (let i = 0; i < 100; i++) {
+    ctx.beginPath();
+    ctx.fillStyle = `rgba(${random(255)},${random(255)},${random(
+      255
+    )}, ${Math.random()})`;
+    ctx.arc(random(WIDTH), random(HEIGHT), random(50), 0, 2 * Math.PI);
+    ctx.fill();
+  }
 }
+
+function clear() {
+  ctx.clearRect(0, 0, WIDTH, HEIGHT);
+}
+
 draw();
 
-const button = document.querySelector("button");
-
-button.addEventListener("click", () =>
-  ctx.clearRect(0, 0, canvas.width, canvas.height)
-);
-
-const undo = document.querySelector("#undo");
-
-undo.addEventListener("click", () => draw());
+newBtn.addEventListener("click", draw);
+clearBtn.addEventListener("click", clear);
