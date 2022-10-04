@@ -1,20 +1,26 @@
-const input = document.querySelector("input");
-const butt = document.querySelector("button");
-const list = document.querySelector("ul");
-const deleteButt = document.createElement("button");
-deleteButt.textContent = "Delete";
+const canvas = document.querySelector("#can");
+const ctx = canvas.getContext("2d");
 
-butt.addEventListener("click", () => {
-  const li = document.createElement("li");
+const x = 50;
+const y = 60;
+const width = 100;
+const height = 75;
+const color = "blue";
 
-  if (input.value != "") {
-    li.textContent = input.value;
-    list.appendChild(li);
-    li.appendChild(deleteButt);
+function draw() {
+  ctx.beginPath();
+  ctx.rect(x, y, width, height);
+  ctx.fillStyle = color;
+  ctx.fill();
+}
+draw();
 
-    deleteButt.addEventListener("click", () => {
-      list.removeChild(li);
-    });
-  }
-  input.value = "";
-});
+const button = document.querySelector("button");
+
+button.addEventListener("click", () =>
+  ctx.clearRect(0, 0, canvas.width, canvas.height)
+);
+
+const undo = document.querySelector("#undo");
+
+undo.addEventListener("click", () => draw());

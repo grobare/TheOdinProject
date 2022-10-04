@@ -6,18 +6,15 @@
 }
 
 body {
-  font-family: "Arvo", sans-serif;
-  background: #ccd5ae;
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  color: #df9e5e;
-  text-align: center;
+  align-items: center;
+  background: #eee;
 }
 
-body ul li {
-  text-align: start;
-  margin: 0;
+canvas {
+  border: 2px solid black;
+  background-color: #fff;
 }
