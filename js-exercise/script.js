@@ -14,8 +14,8 @@ function random(num) {
 }
 
 function draw() {
-  ctx.clearRect(0, 0, WIDTH, HEIGHT);
-  for (let i = 0; i < 100; i++) {
+  clear();
+  for (let index = 0; index < 100; index++) {
     ctx.beginPath();
     ctx.fillStyle = `rgba(${random(255)},${random(255)},${random(
       255
