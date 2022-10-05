@@ -1,15 +1,16 @@
-// function checkAge(age) {
-//   if (age > 18) {
-//     return true;
-//   } else {
-//     return confirm("Did parents allow you?");
-//   }
-// }
+function pow(x, y) {
+  let sum = x;
+  for (let index = 1; index < y; index++) {
+    sum *= x;
+  }
+  return sum;
+}
 
-// function checkAge(age) {
-//   return age > 18 ? true : confirm("Did parents allow you?");
-// }
+let x = prompt("Please type x:");
+let y = prompt("Please type y:");
 
-function checkAge(age) {
-  return age > 18 || confirm("Did parents allow you?");
+if (y < 1) {
+  alert(`${y} is illegal and you know it!!!`);
+} else {
+  alert(pow(x, y));
 }
