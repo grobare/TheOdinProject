@@ -1,14 +1,11 @@
-function fizzBuzz() {
-  let num = prompt("Enter you value:");
-  for (let index = 1; index <= num; index++) {
-    if (index % 3 === 0 && index % 5 === 0) {
-      console.log("FizzBuzz");
-    } else if (index % 3 === 0) {
-      console.log("Fizz");
-    } else if (index % 5 === 0) {
-      console.log("Buzz");
+function downUp(string) {
+  for (let index = 0; index < string.length; index++) {
+    if (index === string.length - 1) {
+      for (let index = string.length - 1; index >= 0; index--) {
+        console.log(string.substr(0, string.length - index));
+      }
     } else {
-      console.log(index);
+      console.log(string.substr(0, string.length - index));
     }
   }
 }
