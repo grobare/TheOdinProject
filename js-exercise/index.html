@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Arvo"
+      rel="stylesheet"
+    />
     <title>Document</title>
   </head>
   <body>
@@ -16,8 +20,13 @@
         it in 5 tries. We'll tell you if your guess was too high or too low.
       </p>
       <div class="input">
-        Enter a guess: <input type="text" />
+        Enter a guess: <input type="number" />
         <button type="submit">Submit</button>
+      </div>
+      <div class="result">
+        <p class="guesses"></p>
+        <p class="lastResult"></p>
+        <p class="lowOrHi"></p>
       </div>
     </div>
   </body>
