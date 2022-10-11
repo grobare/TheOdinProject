@@ -1,33 +1,115 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-us">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="script.js" defer></script>
-    <link rel="stylesheet" href="styles.css" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Arvo"
-      rel="stylesheet"
-    />
-    <title>Document</title>
+    <meta charset="utf-8" />
+
+    <title>Number guessing game</title>
+
+    <style>
+      html {
+        font-family: sans-serif;
+      }
+
+      body {
+        width: 50%;
+        max-width: 800px;
+        min-width: 480px;
+        margin: 0 auto;
+      }
+
+      .form input[type="number"] {
+        width: 200px;
+      }
+
+      .lastResult {
+        color: white;
+        padding: 3px;
+      }
+    </style>
   </head>
+
   <body>
-    <div class="container">
-      <h1>Guess the number</h1>
-      <p>
-        We have selected a random number between 1 and 100. See if you can guess
-        it in 5 tries. We'll tell you if your guess was too high or too low.
-      </p>
-      <div class="input">
-        Enter a guess: <input type="number" />
-        <button type="submit">Submit</button>
-      </div>
-      <div class="result">
-        <p class="guesses"></p>
-        <p class="lastResult"></p>
-        <p class="lowOrHi"></p>
-      </div>
+    <h1>Number guessing game</h1>
+
+    <p>
+      We have selected a random number between 1 and 100. See if you can guess
+      it in 10 turns or fewer. We'll tell you if your guess was too high or too
+      low.
+    </p>
+
+    <div class="form">
+      <label for="guessField">Enter a guess: </label>
+      <input
+        type="number"
+        min="1"
+        max="100"
+        required
+        id="guessField"
+        class="guessField"
+      />
+      <input type="submit" value="Submit guess" class="guessSubmit" />
     </div>
+
+    <div class="resultParas">
+      <p class="guesses"></p>
+      <p class="lastResult"></p>
+      <p class="lowOrHi"></p>
+    </div>
+
+    <script>
+      const guessField = document.querySelector("#guessField");
+      const submitButton = document.querySelector(".guessSubmit");
+      const previousGuesses = document.querySelector(".guesses");
+      const lastResult = document.querySelector(".lastResult");
+      const lowOrHi = document.querySelector(".lowOrHi");
+
+      let randomNumber = Math.floor(Math.random() * 100) + 1;
+      let numberOfGuesses = 1;
+
+      function checker() {
+        let guess = Number(guessField.value);
+
+        if (numberOfGuesses <= 10) {
+          if (guess === randomNumber) {
+            lastResult.textContent = "Congrats you won!";
+            lastResult.style.backgroundColor = "green";
+            lowOrHi.innerHTML = "";
+            const button = document.createElement("button");
+            button.textContent = "Start New Game";
+            button.style.fontSize = "22px";
+            lowOrHi.appendChild(button);
+            button.addEventListener("click", startNewGame);
+          } else if (guess > randomNumber) {
+            previousGuesses.textContent += `${guess} `;
+            lastResult.textContent = "Too high";
+            lastResult.style.backgroundColor = "red";
+            lowOrHi.textContent = `Number of tries: ${numberOfGuesses}`;
+            numberOfGuesses++;
+          } else if (guess < randomNumber) {
+            previousGuesses.textContent += `${guess} `;
+            lastResult.textContent = "Too low!";
+            lowOrHi.textContent = `Number of tries: ${numberOfGuesses}`;
+            lastResult.style.backgroundColor = "blue";
+            numberOfGuesses++;
+          }
+        } else {
+          lastResult.textContent = "YOU ARE A LOSER!";
+          lowOrHi.textContent = "";
+          const button = document.createElement("button");
+          button.textContent = "Start New Game";
+          lowOrHi.appendChild(button);
+          button.addEventListener("click", startNewGame);
+        }
+      }
+
+      submitButton.addEventListener("click", checker);
+
+      function startNewGame() {
+        numberOfGuesses = 1;
+        lastResult.innerHTML = "";
+        lowOrHi.innerHTML = "";
+        randomNumber = Math.floor(Math.random() * 100) + 1;
+      }
+    </script>
   </body>
 </html>
