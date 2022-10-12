@@ -67,12 +67,3 @@ function clear() {
   numberOfGuess = 1;
   results.removeChild(results.lastElementChild);
 }
-
-// function game() {
-//   if (numberOfGuess <= 10) {
-//     check()
-//     numberOfGuess++
-//   } else {
-
-//   }
-// }
