@@ -45,3 +45,10 @@ header p {
 .form #userGuess {
   margin: 0 5px;
 }
+
+.appendedClass {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.9rem;
+}
