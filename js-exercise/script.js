@@ -39,13 +39,13 @@ function check() {
     currentNumber.style.backgroundColor = "green";
     currentNumber.style.textAlign = "center";
     currentNumber.style.color = "white";
-    print();
     playAgain(results);
   } else {
     currentNumber.textContent = `You lose. The number was ${ranNumber}`;
     currentNumber.style.backgroundColor = "black";
     currentNumber.style.textAlign = "center";
     currentNumber.style.color = "white";
+    print();
     playAgain(results);
   }
 }
@@ -59,6 +59,7 @@ function playAgain(selector) {
   button.addEventListener("click", clear);
   para.appendChild(button);
   selector.appendChild(para);
+  ranNumber = randomNumber();
 }
 
 function clear() {
