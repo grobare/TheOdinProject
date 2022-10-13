@@ -1,0 +1,57 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+header {
+  display: flex;
+  height: 600px;
+}
+/* HERO LEFT */
+
+.hero-left {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-text {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.promo {
+  margin-top: auto;
+}
+/* HERO RIGHT */
+
+.hero-right {
+  flex: 4;
+  display: flex;
+  flex-direction: column;
+}
+
+.top-menu ul {
+  display: flex;
+  list-style-type: none;
+  justify-content: space-evenly;
+}
+
+/* FOOTER */
+
+footer {
+  margin-top: auto;
+  padding: 5px;
+}
