@@ -22,6 +22,7 @@ function checkGuess() {
     lastResult.style.backgroundColor = "green";
     startNewGame();
   } else if (guessCount === 10) {
+    lastResult.style.backgroundColor = "black";
     lastResult.textContent = `Game over!!! Lucky number was ${randomNumber}`;
     startNewGame();
   } else {
@@ -45,6 +46,7 @@ function startNewGame() {
   guessSubmit.disabled = true;
   resetButton = document.createElement("button");
   resetButton.textContent = "Start new game";
+
   lowOrHi.appendChild(resetButton);
   resetButton.addEventListener("click", reset);
 }
