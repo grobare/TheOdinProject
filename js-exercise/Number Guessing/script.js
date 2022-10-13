@@ -46,6 +46,7 @@ function startNewGame() {
   guessSubmit.disabled = true;
   resetButton = document.createElement("button");
   resetButton.textContent = "Start new game";
+  resetButton.classList.add("lowOrHi");
 
   lowOrHi.appendChild(resetButton);
   resetButton.addEventListener("click", reset);

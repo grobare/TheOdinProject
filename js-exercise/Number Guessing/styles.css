@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arvo", sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  width: 30%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  border: 2px solid black;
+  padding: 2rem;
+}
+
+.container h1 {
+  text-align: center;
+}
+
+.form > * {
+  font-size: 20px;
+}
+
+.form {
+  text-align: center;
+}
+
+.resultParas {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.resultParas .lastResult {
+  text-align: center;
+  color: white;
+}
+
+.resultParas .lowOrHi {
+  margin: 0 auto;
+}
+
+.resultParas .lowOrHi button {
+  padding: 2px;
+  cursor: pointer;
+}
