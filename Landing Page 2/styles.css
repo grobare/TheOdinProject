@@ -7,7 +7,7 @@
 
 /* content width */
 .container {
-  padding: 5rem 12rem 0rem 12rem;
+  padding: 5% 12% 0% 12%;
 }
 
 body {
@@ -142,7 +142,7 @@ main {
   display: flex;
   height: 100vh;
   width: 100%;
-  padding: 5rem 12rem 0rem 12rem;
+  padding: 5% 12% 0% 12%;
 }
 
 .main-left {
@@ -202,4 +202,9 @@ button:hover {
 #sub {
   width: max-content;
   margin: 0 auto;
+}
+
+/* MEDIA QUERY */
+
+@media screen and (max-width: 900px) {
 }
