@@ -203,8 +203,3 @@ button:hover {
   width: max-content;
   margin: 0 auto;
 }
-
-/* MEDIA QUERY */
-
-@media screen and (max-width: 900px) {
-}
