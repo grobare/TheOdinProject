@@ -37,9 +37,9 @@ footer {
 }
 
 @media screen and (max-width: 680px) {
-  * {
+  /* * {
     padding: 2%;
-  }
+  } */
   body {
     background: yellow;
   }
