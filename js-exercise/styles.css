@@ -1,0 +1,34 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Arvo", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background-color: orange;
+}
+
+header,
+main,
+footer {
+  display: flex;
+  justify-content: center;
+}
+
+header {
+  background: aqua;
+}
+
+main {
+  background: purple;
+}
+
+footer {
+  background: blue;
+}
+
+.container {
+  width: 1080px;
+}
