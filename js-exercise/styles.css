@@ -37,9 +37,10 @@ footer {
 }
 
 @media screen and (max-width: 680px) {
-  /* * {
+  * {
     padding: 2%;
-  } */
+    list-style-type: none;
+  }
   body {
     background: yellow;
   }
