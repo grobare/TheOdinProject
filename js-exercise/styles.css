@@ -40,6 +40,7 @@ footer {
   * {
     padding: 2%;
     list-style-type: none;
+    flex-direction: column;
   }
   body {
     background: yellow;
