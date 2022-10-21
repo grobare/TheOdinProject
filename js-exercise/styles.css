@@ -69,7 +69,8 @@ a {
 .logo-menu a:hover,
 .logo-menu a:focus {
   padding-bottom: 8px;
-  border-bottom: 3px dashed black;
+  border-bottom: 3px dotted black;
+  font-weight: 600;
 }
 
 /* footer */
