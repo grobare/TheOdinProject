@@ -66,6 +66,12 @@ a {
   gap: 2rem;
 }
 
+.logo-menu a:hover,
+.logo-menu a:focus {
+  padding-bottom: 8px;
+  border-bottom: 3px dashed black;
+}
+
 /* footer */
 
 .footer {
