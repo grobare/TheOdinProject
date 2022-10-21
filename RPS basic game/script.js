@@ -4,19 +4,9 @@
 //player decision based on input
 
 function playerChoose() {
-  const rock = document.querySelector("#rock");
-  const paper = document.querySelector("#paper");
-  const scissors = document.querySelector("#scissors");
-
-  rock.addEventListener("click", playRound(getComputerChoice(), "rock"));
-  paper.addEventListener("click", playRound(getComputerChoice(), "paper"));
-  scissors.addEventListener(
-    "click",
-    playRound(getComputerChoice(), "scissors")
-  );
+  const answer = prompt("Enter your choice!");
+  return answer;
 }
-
-playerChoose();
 
 function getComputerChoice() {
   const randInt = Math.floor(Math.random() * 3) + 1;
