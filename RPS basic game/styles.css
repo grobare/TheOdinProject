@@ -39,4 +39,7 @@ button {
   h1 {
     font-size: 20px;
   }
+  .buttons {
+    flex-direction: column;
+  }
 }
