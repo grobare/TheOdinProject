@@ -32,7 +32,7 @@ button {
   background-color: transparent;
   border: none;
   cursor: pointer;
-  color: #fff;
+  color: #fffaaa;
 }
 
 @media screen and (max-width: 700px) {
