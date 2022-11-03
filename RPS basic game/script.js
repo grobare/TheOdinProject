@@ -30,3 +30,5 @@ function playRound() {
     console.log("Wrong entry.");
   }
 }
+
+//to add event listeners and UI
